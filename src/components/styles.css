@@ -1,0 +1,136 @@
+.flex-container {
+  display: flex;
+  justify-content: center; /* Align items with equal spacing */
+  align-items: center; /* Vertically center items */
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 100%;
+  overflow: auto;
+}
+
+.flex-item {
+  flex: 1; /* Grow and shrink equally */
+  padding: 10px;
+  background-color: #3498db;
+}
+
+.flex-item svg {
+  height: 80vh; /* Make the SVG fill the width of the flex-item */
+  width: 100%; /* Scale the height to maintain aspect ratio */
+}
+
+.flex-container svg {
+  flex: 1; /* Grow and shrink equally */
+  padding: 0px;
+  height: 80vh; /* Make the SVG fill the width of the flex-item */
+  width: 100%; /* Scale the height to maintain aspect ratio */
+}
+
+.svg-container2 {
+  width: 100%;
+  height:70vh;
+  overflow: auto;
+}
+
+.ctrlpan-text {
+  color: blue;
+  font-size: 16px;
+}
+
+.input {
+  display: flex;
+  width: 95%;
+  position: relative;
+  align-items: center;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input_submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+
+.input_submit:hover {
+  background-color: #388ae2;
+}
+
+.input_submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.container {
+  width: 95%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dragactive {
+  background-color: rgb(0, 221, 236);
+}
+
+.dragcomplete {
+  background-color: rgb(255, 38, 0);
+}
+
+.remove {
+  background-color: rgb(235, 103, 80);
+}
+
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .container {
+    width: 95%;
+    flex-direction: column;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
